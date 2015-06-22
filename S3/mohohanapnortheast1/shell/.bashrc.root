@@ -1,0 +1,42 @@
+# ~/.bashrc: executed by bash(1) for non-login shells.
+
+export PS1="\033k\033\\ ${debian_chroot:+($debian_chroot)}\[\033[01;30m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ "
+export LC_ALL='en_US.UTF-8'
+export LANGUAGE='en_US.UTF-8'
+export LANG='en_US.UTF-8'
+umask 022
+
+# You may uncomment the following lines if you want `ls' to be colorized:
+export LS_OPTIONS='--color=auto'
+eval "`dircolors`"
+alias ls='ls $LS_OPTIONS'
+# alias ll='ls $LS_OPTIONS -l'
+# alias l='ls $LS_OPTIONS -lA'
+#
+# Some more alias to avoid making mistakes:
+# alias rm='rm -i'
+# alias cp='cp -i'
+# alias mv='mv -i'
+alias   c='clear'
+alias   ll='ls -lh'
+alias   lll='ls -alhA'
+alias   lm='ls -alh|more'
+alias   h='history'
+alias   q='exit'
+alias   s='screen -R'
+alias   rm='rm -rf'
+alias   m='sync; sync; sync; sync; sync'
+alias   v='vnc4server -geometry 1920x1080 -geometry 1440x900 -geometry 1280x800 -geometry 1024x768 -geometry 800x600'
+alias   v1='xrandr -s 800x600'
+alias   v2='xrandr -s 1024x768'
+alias   v3='xrandr -s 1280x800'
+alias   v4='xrandr -s 1440x900'
+alias   v5='xrandr -s 1920x1080'
+alias   vv='vnc4server -kill :1'
+alias   r='sudo -i'
+
+alias   au='apt-get update'
+alias   ac='apt-get clean'
+alias   ar='apt-get -y remove --purge'
+alias   ai='apt-get -y install'
+alias   aa='apt-get -y autoremove'

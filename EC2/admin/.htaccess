@@ -1,0 +1,4 @@
+AuthName "mohohan admin login"
+AuthUserFile /var/www/mohohan/admin/.htpasswd
+AuthType Basic
+require valid-user
